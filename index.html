@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1020" />
+  <meta name="description" content="LocalBiz AI helps small businesses create product listings and marketing content using open-source AI." />
+  <title>LocalBiz AI — Your Business Copilot</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#">
+        <span class="brand-icon">✳</span>
+        <span>localbiz<span class="brand-light">.ai</span></span>
+      </a>
+
+      <div class="workspace">
+        <div class="workspace-avatar">L</div>
+        <div>
+          <strong>My Workspace</strong>
+          <small>Free workspace</small>
+        </div>
+        <span class="chevron">⌄</span>
+      </div>
+
+      <p class="nav-label">WORKSPACE</p>
+      <nav class="navigation">
+        <button class="nav-item active" data-view="create">
+          <span>✦</span> AI Studio
+        </button>
+        <button class="nav-item" data-view="history">
+          <span>◷</span> My creations
+        </button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="open-card">
+          <span class="open-icon">⌘</span>
+          <h3>Powered by open AI.</h3>
+          <p>Run your own model. Keep your data in your control.</p>
+          <span class="open-tag"><span class="status-dot"></span> OPEN INNOVATION</span>
+        </div>
+        <div class="profile">
+          <div class="profile-avatar">Y</div>
+          <div><strong>Your business</strong><small>Starter plan</small></div>
+          <span class="chevron">•••</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-icon">✳</span> localbiz.ai</div>
+        <div class="breadcrumb">Workspace <span>/</span> <strong id="breadcrumb-title">AI Studio</strong></div>
+        <div class="topbar-right">
+          <span class="privacy-pill"><span class="status-dot"></span> Privacy first</span>
+          <button class="avatar-small" aria-label="User profile">Y</button>
+        </div>
+      </header>
+
+      <section id="create-view" class="content">
+        <div class="hero">
+          <div class="eyebrow"><span class="sparkle">✦</span> YOUR OPEN-SOURCE BUSINESS COPILOT</div>
+          <h1>Small business.<br /><span>Big possibilities.</span></h1>
+          <p class="hero-description">
+            Turn your ideas into content that sells. Create better listings,
+            smarter marketing, and fresh ideas in seconds.
+          </p>
+          <div class="hero-points">
+            <span>✓ Simple to use</span>
+            <span>✓ Open-weight AI</span>
+            <span>✓ Your data, your control</span>
+          </div>
+        </div>
+
+        <div class="studio-grid">
+          <section class="panel form-panel">
+            <div class="panel-heading">
+              <div class="heading-icon">✦</div>
+              <div>
+                <h2>Create something great</h2>
+                <p>Tell us about your product or business.</p>
+              </div>
+            </div>
+
+            <form id="generator-form">
+              <label for="business">Business name</label>
+              <input id="business" name="business" placeholder="e.g. The Cozy Corner" maxlength="100" required />
+
+              <label for="product">What are you selling?</label>
+              <textarea id="product" name="product" rows="3" maxlength="1000"
+                placeholder="e.g. Handmade soy candles with lavender fragrance..." required></textarea>
+
+              <div class="field-row">
+                <div>
+                  <label for="audience">Target audience</label>
+                  <select id="audience" name="audience">
+                    <option value="Everyday customers">Everyday customers</option>
+                    <option value="Young professionals">Young professionals</option>
+                    <option value="Students">Students</option>
+                    <option value="Parents and families">Parents & families</option>
+                    <option value="Premium buyers">Premium buyers</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="tone">Writing style</label>
+                  <select id="tone" name="tone">
+                    <option value="Friendly and engaging">Friendly</option>
+                    <option value="Professional">Professional</option>
+                    <option value="Fun and playful">Fun & playful</option>
+                    <option value="Premium and elegant">Premium</option>
+                  </select>
+                </div>
+              </div>
+
+              <label>What do you want to create?</label>
+              <div class="tool-options">
+                <label class="tool-option selected">
+                  <input type="radio" name="tool" value="listing" checked />
+                  <span class="tool-emoji">✎</span>
+                  <span><strong>Product listing</strong><small>Descriptions that sell</small></span>
+                </label>
+                <label class="tool-option">
+                  <input type="radio" name="tool" value="social" />
+                  <span class="tool-emoji">◎</span>
+                  <span><strong>Social content</strong><small>Captions & hashtags</small></span>
+                </label>
+                <label class="tool-option">
+                  <input type="radio" name="tool" value="ideas" />
+                  <span class="tool-emoji">↗</span>
+                  <span><strong>Growth ideas</strong><small>Practical next steps</small></span>
+                </label>
+                <label class="tool-option">
+                  <input type="radio" name="tool" value="pricing" />
+                  <span class="tool-emoji">₹</span>
+                  <span><strong>Pricing strategy</strong><small>Pricing & validation</small></span>
+                </label>
+              </div>
+
+              <label for="extra">Anything else? <span class="optional">(optional)</span></label>
+              <input id="extra" name="extra" maxlength="500" placeholder="e.g. Affordable, eco-friendly, made in India" />
+
+              <button id="generate-btn" class="primary-btn" type="submit">
+                <span>✦</span> Generate with AI <span class="button-arrow">→</span>
+              </button>
+              <p class="form-note">Your input is sent only to the AI provider you select.</p>
+            </form>
+          </section>
+
+          <section class="panel result-panel" aria-live="polite">
+            <div class="result-header">
+              <div>
+                <span class="result-label">YOUR CREATION</span>
+                <h2 id="result-title">Your next big idea starts here.</h2>
+              </div>
+              <span class="result-sparkle">✦</span>
+            </div>
+
+            <div id="empty-state" class="empty-state">
+              <div class="empty-illustration">
+                <div class="illustration-card card-back">✦</div>
+                <div class="illustration-card card-front">
+                  <span class="mini-star">✧</span>
+                  <span class="illustration-line"></span>
+                  <span class="illustration-line short"></span>
+                  <span class="illustration-badge">AI</span>
+                </div>
+              </div>
+              <h3>Made for your business.</h3>
+              <p>Your AI-generated content will appear here, ready to review, edit, and copy.</p>
+              <div class="empty-features">
+                <span>✦ On-brand content</span>
+                <span>↗ Actionable ideas</span>
+                <span>⌘ Less busywork</span>
+              </div>
+            </div>
+
+            <div id="loading-state" class="loading-state hidden">
+              <div class="loader"></div>
+              <h3>Creating something great...</h3>
+              <p>Your AI assistant is working on it.</p>
+            </div>
+
+            <div id="result-content" class="result-content hidden">
+              <div id="provider-badge" class="provider-badge">DEMO MODE</div>
+              <div id="output" class="output"></div>
+              <div class="result-actions">
+                <button id="copy-btn" class="secondary-btn">▢ Copy content</button>
+                <button id="save-btn" class="secondary-btn">♡ Save</button>
+                <button id="regenerate-btn" class="secondary-btn">↻ Retry</button>
+              </div>
+              <p class="disclaimer">AI-generated suggestions may need fact-checking. Review before publishing.</p>
+            </div>
+
+            <div class="result-footer">
+              <span><span class="status-dot"></span> Built for independent businesses</span>
+              <span>✦ Open by design</span>
+            </div>
+          </section>
+        </div>
+
+        <section class="bottom-banner">
+          <div class="banner-icon">⌘</div>
+          <div>
+            <h3>AI that works on your terms.</h3>
+            <p>Connect a local open-weight model with Ollama for greater control over your data and running costs.</p>
+          </div>
+          <a href="#setup" id="setup-link">Explore setup <span>→</span></a>
+        </section>
+
+        <section id="setup" class="setup-panel">
+          <h2>Connect your own AI</h2>
+          <p>Choose local Ollama to generate content with an open-weight model running on your computer.</p>
+          <label for="provider">AI provider</label>
+          <select id="provider">
+            <option value="demo">Demo mode — no AI connection</option>
+            <option value="ollama">Local Ollama model</option>
+          </select>
+          <div id="ollama-settings" class="hidden">
+            <label for="ollama-url">Ollama API address</label>
+            <input id="ollama-url" value="http://localhost:11434" />
+            <label for="model">Model name</label>
+            <input id="model" value="llama3.2" placeholder="e.g. llama3.2" />
+            <p class="setup-note">Install Ollama and download the model first. The browser must be permitted to access your local Ollama server.</p>
+            <button id="test-connection" class="secondary-btn" type="button">Test connection</button>
+            <p id="connection-status" role="status"></p>
+          </div>
+        </section>
+      </section>
+
+      <section id="history-view" class="content hidden">
+        <div class="hero history-hero">
+          <div class="eyebrow">YOUR WORKSPACE</div>
+          <h1>Your saved <span>creations.</span></h1>
+          <p class="hero-description">Find the content you've saved and reuse it whenever you need.</p>
+        </div>
+        <div id="history-list" class="history-list"></div>
+        <button id="back-to-studio" class="secondary-btn">← Back to AI Studio</button>
+      </section>
+
+      <footer class="footer">
+        <span>© 2026 LocalBiz AI · Built for small businesses</span>
+        <span>Open-source at heart <span class="footer-star">✦</span></span>
+      </footer>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
